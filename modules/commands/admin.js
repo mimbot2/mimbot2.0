@@ -1,11 +1,11 @@
 module.exports.config = {
-	name: "admin",
+	name: "Mim",
 	version: "1.0.5",
 	hasPermssion: 0,
-	credits: "Mirai Team",
+	credits: "mim",
 	description: "Admin Settings",
   usePrefix: true,
-	commandCategory: "Admin",
+	commandCategory: "AFRIDI",
 	usages: "[list/add/remove] [userID]",
   cooldowns: 5,
   dependencies: {

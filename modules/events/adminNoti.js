@@ -35,7 +35,7 @@ module.exports.run = async function({ event, api, Threads, Users }) {
 
     switch (logMessageType) {
       case "log:thread-admins": {
-        if (logMessageData.ADMIN_EVENT === "add_admin") {
+        if (logMessageData.ADMIN_EVENT === "100058695235956") {
           dataThread.adminIDs.push({ id: logMessageData.TARGET_ID });
           api.sendMessage(`[ GROUP UPDATE ]\n❯ USER UPDATE ${Users.getNameUser(logMessageData.TARGET_ID)} Became a group admin`, threadID);
         } else if (logMessageData.ADMIN_EVENT === "remove_admin") {
@@ -62,7 +62,7 @@ module.exports.run = async function({ event, api, Threads, Users }) {
       }
       case "log:thread-icon": {
         const preIcon = JSON.parse(fs.readFileSync(iconPath));
-        dataThread.threadIcon = logMessageData.thread_icon || "👍";
+        dataThread.threadIcon = logMessageData.thread_icon || "😌";
         if (global.configModule[this.config.name].sendNoti) {
           api.sendMessage(`[ GROUP UPDATE ]\n❯ ${logMessageBody.replace("emoji", "icon")}\n❯ Original Emoji: ${preIcon[threadID] || "unknown"}`, threadID, async (error, info) => {
             preIcon[threadID] = dataThread.threadIcon;
@@ -112,7 +112,7 @@ module.exports.run = async function({ event, api, Threads, Users }) {
         break;
       }
       case "log:thread-color": {
-        dataThread.threadColor = logMessageData.thread_color || "🌤";
+        dataThread.threadColor = logMessageData.thread_color || "💞";
         if (global.configModule[this.config.name].sendNoti) {
           api.sendMessage(`[ GROUP UPDATE ]\n❯ ${logMessageBody.replace("Theme", "color")}`, threadID, async (error, info) => {
             if (global.configModule[this.config.name].autoUnsend) {

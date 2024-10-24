@@ -2,7 +2,7 @@ module.exports.config = {
   name: "help",
   version: "1.0.2",
   hasPermission: 0,
-  credits: "Mirai Team & Mod by Yan Maglinte",
+  credits: "Creator By AFRIDI",
   description: "Beginner's Guide",
   usePrefix: true,
   commandCategory: "guide",
@@ -161,13 +161,7 @@ module.exports.run = async function ({ api, event, args, getText }) {
     const fs = require("fs-extra");
     const imgP = [];
     const img = [
-      "https://i.imgur.com/ruQ2pRn.jpg",
-      "https://i.imgur.com/HXHb0cB.jpg",
-      "https://i.imgur.com/ZJEI6KW.jpg",
-      "https://i.imgur.com/XGL57Wp.jpg",
-      "https://i.imgur.com/6OB00HJ.jpg",
-      "https://i.imgur.com/6vHaRZm.jpg",
-      "https://i.imgur.com/k6uE93k.jpg"
+      "https://i.imgur.com/BfXcvZc.gif",
     ];
     const path = __dirname + "/cache/menu.png";
     const rdimg = img[Math.floor(Math.random() * img.length)];
